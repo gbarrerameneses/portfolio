@@ -1025,7 +1025,7 @@ body.dark-theme {
         border-radius:  10.6rem;
     }
     .home__perfil img {
-        wi auto;
+        width:  auto;
         display: flex;
         align-items: center;
         margin: auto;
