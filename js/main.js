@@ -62,27 +62,27 @@ const sendEmail = (e) => {
 
     //Check if the field has a value
     if(contactName.value === '' || contactEmail.value === '' || contactProject.value === ''){
-        
+
         //Add and remove color
         contactMessage.classList.remove('color-blue')
         contactMessage.classList.add('color-red')
 
         //Show message
-        contactMessage.textContent = 'Write all the input fields 📬'
+        contactMessage.textContent = 'Llena todos los campos de entrada. 📬'
     } else {
         //serviceID - templateID - #form - publicKey
         emailjs.sendForm('service_4634i31','template_cvwrr46','#contact-form','mCsH0Ud9Zq-Eon-_h')
             .then(() => {
                 //Show message and add color
                 contactMessage.classList.add('color-blue')
-                contactMessage.textContent = 'Message sent ✔️'
+                contactMessage.textContent = 'Mensaje enviado ✔️'
 
                 //Remove message after five seconds
                 setTimeout(() => {
                     contactMessage.textContent = ''
-                }, 500)
+                }, 3000)
             }, (error) => {
-                alert('OOPS! Something has failed...', error)
+                alert('OOPS! Lo siento, hubo un error...', error)
             })
         //To clear the input field
         contactName.value = ''
