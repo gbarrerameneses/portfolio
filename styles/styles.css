@@ -23,7 +23,7 @@
     /*blue: 207 - purple: 250 - pink: 356 - teal: 174*/
     --gradient-color: linear-gradient(180deg,
                     hsla(174, 48%, 72%, 0),
-                    hsla(174, 65%, 65%, 1));
+                    hsl(19deg 100% 50%));
     /*Font and typography*/
     --body-font: 'Roboto', sans-serif;
     /* --body-font: 'Open Sans', sans-serif; */
@@ -117,6 +117,9 @@ body.dark-theme {
     /* --first-color: hsl(var(--hue), var(--sat), 50%); */
      /* For dark mode animation */
     transition: background .4s;
+    --gradient-color: linear-gradient(180deg,
+                    hsla(174, 48%, 72%, 0),
+                    hsla(174, 65%, 65%, 1));
 }
 
 /*********************************
@@ -126,7 +129,8 @@ body.dark-theme {
 .dark-theme .nav,
 .dark-theme .nav__menu,
 .dark-theme .scrollup {
-    background-color: var(--container-color);
+    /* background-color: var(--container-color); */
+    background-color: var(--body-color);
     box-shadow: 0 4px 20px hsl(207, 24%, 8%, .4);
 }
 .dark-theme .home__shape-wawes,
@@ -395,6 +399,7 @@ body.dark-theme {
     align-items: flex-end;
 }
 .home__perfil img {
+    /* width: 150px; */
     width: auto;
     display: flex;
     align-items: center;
